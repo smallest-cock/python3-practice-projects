@@ -1,7 +1,9 @@
 #!  /usr/bin/python3
 # Madlibs.py - Reads Madlibs template from a text file, asks user to input appropriate
 # words, then creates completed Madlib in new text file and prints results on screen
-import re, sys, os
+import re
+import sys
+import os
 
 # creates regex values to be used for searching the madlibTempFile
 regexTxt = re.compile(r'.txt$')
