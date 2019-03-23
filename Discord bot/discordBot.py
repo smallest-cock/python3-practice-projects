@@ -9,6 +9,8 @@ import discord
 from random import randint
 import asyncio
 
+client = discord.Client()
+
 
 async def post_challenge_background_task():
     await client.wait_until_ready()
