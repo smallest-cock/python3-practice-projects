@@ -1,9 +1,4 @@
-# id 558404571446378516
-# token NTU4NDA0NTcxNDQ2Mzc4NTE2.D3WpGw.G4tOf-H_77-qQykXEoKq_L9veg0
-# permission integer 198720
-
-# https://discordapp.com/oauth2/authorize?client_id=558404571446378516&scope=bot&permissions=198720
-
+# challenge bot for discord - posts challenges from a text file randomly at regular time intervals
 
 import discord
 from random import randint
@@ -11,23 +6,35 @@ import asyncio
 
 client = discord.Client()
 
+postedList = []
+
 
 async def post_challenge_background_task():
     await client.wait_until_ready()
-
+    global postedList
     while not client.is_closed():
         try:
-            with open("BeginnerChallenges.txt") as f:
-                channel = client.get_channel(558403957408399362)
+            with open("BeginnerChallenges.txt") as f:  # text file that contains challenges
+                channel = client.get_channel(channelIDnumbergoeshere)  # channel ID # in parentheses
                 text = f.read()
+                # challenges must be separated by a blank line in txt file
                 challengeList = text.split('\n\n')
-                randChall = challengeList[randint(0, len(challengeList) - 1)]
-                await channel.send("```%s```" % randChall)
+                while True:
+                    randChall = challengeList[randint(0, len(challengeList) - 1)]
+                    if randChall not in postedList:
+                        await channel.send("```%s```" % randChall)
+                        postedList.append(randChall)
+                        break
+                    for chall in challengeList:
+                        if chall not in postedList:
+                            continue
+                    await channel.send("Oops. I've ran out of new challenges. Please update my text file... *bleep bloop*")
+                    break
 
-            await asyncio.sleep(3600)
+            await asyncio.sleep(60)  # time to wait between posts (in seconds) in parentheses
         except Exception as e:
             print(str(e))
-            await asyncio.sleep(3600)
+            await asyncio.sleep(60)  # time to wait between posts (in seconds) in parentheses
 
 
 @client.event  # event decorator/wrapper
@@ -47,4 +54,4 @@ async def on_message(message):
 
 client.loop.create_task(post_challenge_background_task())
 
-client.run('NTU4NDA0NTcxNDQ2Mzc4NTE2.D3WpGw.G4tOf-H_77-qQykXEoKq_L9veg0')
+client.run('tokengoeshere')  # server token in parentheses (and as a string)
