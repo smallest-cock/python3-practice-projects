@@ -15,26 +15,33 @@ async def post_challenge_background_task():
     while not client.is_closed():
         try:
             with open("BeginnerChallenges.txt") as f:  # text file that contains challenges
-                channel = client.get_channel(channelIDnumbergoeshere)  # channel ID # in parentheses
+                channel = client.get_channel(channelIDnumbergoeshere123)  # channel ID # in parentheses
                 text = f.read()
                 # challenges must be separated by a blank line in txt file
                 challengeList = text.split('\n\n')
-                while True:
+                keepLooking = True
+                tryAgain = False
+                while keepLooking is True:
                     randChall = challengeList[randint(0, len(challengeList) - 1)]
                     if randChall not in postedList:
                         await channel.send("```%s```" % randChall)
                         postedList.append(randChall)
+                        keepLooking = False
                         break
                     for chall in challengeList:
                         if chall not in postedList:
-                            continue
-                    await channel.send("Oops. I've ran out of new challenges. Please update my text file... *bleep bloop*")
-                    break
+                            tryAgain = True
+                            break
+                    if keepLooking is True and tryAgain is False:
+                        await channel.send("Oops. I've ran out of new challenges. Please update my text file... *bleep bloop*")
+                        break
+                    elif tryAgain is True:
+                        continue
 
-            await asyncio.sleep(60)  # time to wait between posts (in seconds) in parentheses
+            await asyncio.sleep(86400)  # time to wait between posts (in seconds) in parentheses
         except Exception as e:
             print(str(e))
-            await asyncio.sleep(60)  # time to wait between posts (in seconds) in parentheses
+            await asyncio.sleep(86400)  # time to wait between posts (in seconds) in parentheses
 
 
 @client.event  # event decorator/wrapper
