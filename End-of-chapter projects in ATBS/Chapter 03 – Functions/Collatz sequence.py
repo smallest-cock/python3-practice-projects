@@ -10,6 +10,8 @@ def collatz(number):
     except ValueError:
         print("Error: That's not an integer.")
         return
+
+
 def repeat():
     while True:
         try:
@@ -27,6 +29,8 @@ def repeat():
         except ValueError:
             print("Error: That's not an integer.")
             return
+
+
 print("Hello! Today we will explore the Collatz sequence...\n")
 try:
     chosenInteger = int(input("Enter an integer:  "))

@@ -4,12 +4,14 @@ theBoard = {'tl': ' ', 'tm': ' ', 'tr': ' ',
             'ml': ' ', 'mm': ' ', 'mr': ' ',
             'll': ' ', 'lm': ' ', 'lr': ' '}
 
+
 def printBoard(board):
     print(' ' + board['tl'] + ' | ' + board['tm'] + ' | ' + board['tr'])
     print('---+---+---')
     print(' ' + board['ml'] + ' | ' + board['mm'] + ' | ' + board['mr'])
     print('---+---+---')
     print(' ' + board['ll'] + ' | ' + board['lm'] + ' | ' + board['lr'])
+
 
 def boardChecker(board, symbol):
     if board['tl'] == symbol and board['tm'] == symbol and board['tr'] == symbol:
@@ -31,10 +33,11 @@ def boardChecker(board, symbol):
     else:
         return 'yes'
 
+
 turn = 'X'
 won = False
 leave = False
-while leave == False:
+while leave is False:
     for i in range(9):
         printBoard(theBoard)
         print('\n\nTurn for ' + turn + '. Move on which space?')
@@ -55,7 +58,7 @@ while leave == False:
     leave = True
 print(' ')
 printBoard(theBoard)
-if won == True:
+if won is True:
     print('\n\nCongratulations, ' + turn + "'s win!!!")
 else:
     print('\nDraw... Nobody wins.')

@@ -2,6 +2,7 @@
 # strongPasswordDetection.py - Detects whether a password is strong or not
 import re
 
+
 def passChecker(string):
     passRegexCaps = re.compile(r'[A-Z]+')   # regex that has at least one capital letter
     passRegexLow = re.compile(r'[a-z]+')    # regex that has at least one lowercase letter
@@ -29,6 +30,7 @@ def passChecker(string):
             print('\nWeak password. Needs at least one lowercase letter.')
     else:
         print('\nWeak password. Needs at least one uppercase letter.')
+
 
 password = input('Enter a password to check:  ')
 passChecker(password)
