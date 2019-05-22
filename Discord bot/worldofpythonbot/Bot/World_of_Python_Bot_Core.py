@@ -14,8 +14,12 @@ extensions = ['basic', 'faq', 'roadmap', 'help', 'admin', 'challenges']
 extensions = ['cogs.' + name for name in extensions]
 
 if __name__ == '__main__':
-    for extension in extensions:
-        client.load_extension(extension)
+    try:
+        for extension in extensions:
+            client.load_extension(extension)
+            print(f'Loaded {extension}')
+    except Exception as e:
+        print(f'{extension} cannot be loaded: {e}')
 
 
 @client.event
