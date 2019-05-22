@@ -23,7 +23,7 @@ class ChallengeCog(commands.Cog):
     def cog_unload(self):
         self.regular_posts.cancel()
 
-    @tasks.loop(minutes=2)
+    @tasks.loop(days=2)
     async def regular_posts(self):
         global modActionsChannel
         modActions = self.client.get_channel(modActionsChannel)
