@@ -6,11 +6,11 @@ import asyncio
 
 modActionsChannel = 580506564675371028
 
-channelInfo = (('.\\ChallengeFiles\\Beginner_Challenges.txt', 580505776938942474),
-               ('.\\ChallengeFiles\\Novice_Challenges.txt', 580505804776407083),
-               ('.\\ChallengeFiles\\Intermediate_Challenges.txt', 580505850427211786),
-               ('.\\ChallengeFiles\\Advanced_Challenges.txt', 580505890092744717),
-               ('.\\ChallengeFiles\\Expert_Challenges.txt', 580505928932261888))
+channelInfo = (('./ChallengeFiles/Beginner_Challenges.txt', 580505776938942474),
+               ('./ChallengeFiles/Novice_Challenges.txt', 580505804776407083),
+               ('./ChallengeFiles/Intermediate_Challenges.txt', 580505850427211786),
+               ('./ChallengeFiles/Advanced_Challenges.txt', 580505890092744717),
+               ('./ChallengeFiles/Expert_Challenges.txt', 580505928932261888))
 
 postedList = []
 
@@ -23,7 +23,7 @@ class ChallengeCog(commands.Cog):
     def cog_unload(self):
         self.regular_posts.cancel()
 
-    @tasks.loop(minutes=2)
+    @tasks.loop(hours=1)
     async def regular_posts(self):
         global modActionsChannel
         modActions = self.client.get_channel(modActionsChannel)
