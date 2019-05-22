@@ -6,11 +6,11 @@ import asyncio
 
 modActionsChannel = 580506564675371028
 
-channelInfo = (('.\\ChallengeFiles\\Beginner_Challenges.txt', 580505776938942474),
-               ('.\\ChallengeFiles\\Novice_Challenges.txt', 580505804776407083),
-               ('.\\ChallengeFiles\\Intermediate_Challenges.txt', 580505850427211786),
-               ('.\\ChallengeFiles\\Advanced_Challenges.txt', 580505890092744717),
-               ('.\\ChallengeFiles\\Expert_Challenges.txt', 580505928932261888))
+channelInfo = (('./ChallengeFiles/Beginner_Challenges.txt', 580505776938942474),
+               ('./ChallengeFiles/Novice_Challenges.txt', 580505804776407083),
+               ('./ChallengeFiles/Intermediate_Challenges.txt', 580505850427211786),
+               ('./ChallengeFiles/Advanced_Challenges.txt', 580505890092744717),
+               ('./ChallengeFiles/Expert_Challenges.txt', 580505928932261888))
 
 postedList = []
 
