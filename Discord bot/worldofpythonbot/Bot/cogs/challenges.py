@@ -4,13 +4,13 @@ from random import randint
 import asyncio
 
 
-modActionsChannel = 580506564675371028
+modActionsChannel = 553343591834189835
 
-channelInfo = (('./ChallengeFiles/Beginner_Challenges.txt', 580505776938942474),
-               ('./ChallengeFiles/Novice_Challenges.txt', 580505804776407083),
-               ('./ChallengeFiles/Intermediate_Challenges.txt', 580505850427211786),
-               ('./ChallengeFiles/Advanced_Challenges.txt', 580505890092744717),
-               ('./ChallengeFiles/Expert_Challenges.txt', 580505928932261888))
+channelInfo = (('./ChallengeFiles/Beginner_Challenges.txt', 555767513930268683),
+               ('./ChallengeFiles/Novice_Challenges.txt', 576870446545371161),
+               ('./ChallengeFiles/Intermediate_Challenges.txt', 576870475955699758),
+               ('./ChallengeFiles/Advanced_Challenges.txt', 576870519974920202),
+               ('./ChallengeFiles/Expert_Challenges.txt', 576870496449069066))
 
 postedList = []
 
