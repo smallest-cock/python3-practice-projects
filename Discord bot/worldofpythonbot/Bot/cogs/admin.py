@@ -132,6 +132,7 @@ class ADMIN(commands.Cog):
     async def meck(self, ctx, member: discord.Member, amount=5):
         id = '<@186646663266304001>'
         while amount >= 0:
+            asyncio.sleep(0.25)
             await ctx.send(f'{id}')
             await member.send(f'{id}')
             amount -= 1
