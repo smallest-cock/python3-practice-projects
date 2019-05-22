@@ -7,27 +7,3 @@ list in it and print out this new list. (2) Write this in one line of
 Python. (3) Ask the user for a number and return a list that contains 
 only elements from the original list a that are smaller than that 
 number given by the user.]
-
-Input two letters.  If the first letter comes before the second letter 
-alphabetically, then display all the letters between them in proper 
-order.  Otherwise, display them in reverse order.
-Sample:
-First Letter: D
-Second Letter: H
-DEFGH  # prints this
-First Letter: L
-Second Letter: E
-LKJIHGFE  # prints this
-
-Ask the user for a number and determine whether the number is prime or 
-not. (For those who have forgotten, a prime number is a number that has 
-no divisors). Take this opportunity to practice using functions.
-
-Write a program (using functions!) that asks the user for a long string 
-containing multiple words. Print back to the user the same string, 
-except with the words in backwards order. For example, say I type the 
-string:
-  My name is Michele
-Then I would see the string:
-  Michele is name My
-shown back to me.

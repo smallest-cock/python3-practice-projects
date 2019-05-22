@@ -33,22 +33,3 @@ message. Ask the user for two numbers: one number to check (call it
 num) and one number to divide by (check). If check divides evenly into 
 num, tell that to the user. If not, print a different appropriate 
 message.]
-
-Take two lists, say for example these two:
-a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
-and write a program that returns a list that contains only the elements 
-that are common between the lists (without duplicates). Make sure your 
-program works on two lists of different sizes.
-[Extra: Randomly generate two lists to test this]
-
-Write a program that takes a list of numbers 
-(for example, a = [5, 10, 15, 20, 25]) and makes a new list of only 
-the first and last elements of the given list. [For practice, write 
-this code inside a function that takes a list as an argument and 
-returns the new list.]
-
-Write a function that takes an ordered list of numbers 
-(a list where the elements are in order from smallest to largest) and 
-another number. The function decides whether or not the given number 
-is inside the list and returns (then prints) an appropriate boolean value.
