@@ -1,1 +1,0 @@
-Pretend this is a challenge for advanced python programmers
